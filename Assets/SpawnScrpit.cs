@@ -7,6 +7,7 @@ public class SpawnScrpit : MonoBehaviour
     public GameObject pipe;
     public float spawnRate = 2f;
     private float timer = 0;
+    public int score = -3;
     public float heightOffset = 10;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class SpawnScrpit : MonoBehaviour
         {
             spawnPipe();
             timer = 0;
+            score=score+1;
         }
 
 
@@ -36,5 +38,6 @@ public class SpawnScrpit : MonoBehaviour
         float lowestPoint = transform.position.y - heightOffset;
         float highestPoint = transform.position.y + heightOffset;
         Instantiate(pipe, new Vector3(transform.position.x, Random.RandomRange(lowestPoint,highestPoint), 0), transform.rotation);
+    
     }
 }

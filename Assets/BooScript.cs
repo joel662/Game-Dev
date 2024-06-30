@@ -9,6 +9,8 @@ public class BooScript : MonoBehaviour
 
     public Rigidbody2D boo;
     public float flightStrength;
+    public GameObject spawner;
+    public SpawnScrpit sc;
 
     [SerializeField] private Transform poleCheck;
     [SerializeField] private LayerMask poleLayer;
@@ -20,7 +22,7 @@ public class BooScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        sc = spawner.GetComponent<SpawnScrpit>();
     }
 
     // Update is called once per frame
@@ -47,7 +49,9 @@ public class BooScript : MonoBehaviour
     private void killReset()
     {
         Destroy(gameObject);
+        
+        Debug.Log(sc.score);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
+        
     }
 }
