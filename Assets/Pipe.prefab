@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7777503310004019016}
   - component: {fileID: 209025557199191204}
   - component: {fileID: 1682293771222578297}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Top Pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1487552222377808648}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2a4ec5554db3fa844b9c243a725163ef, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 6892135361423789609}
   - component: {fileID: 334303719312145316}
   - component: {fileID: 6134420161312962985}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottom Pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2855104502649169632}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2a4ec5554db3fa844b9c243a725163ef, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -270,7 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1006585516485261923}
   - component: {fileID: 8376446949786668614}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
