@@ -5,7 +5,6 @@ using UnityEngine;
 public class MoveScrpit : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float deadZone = -30f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +16,7 @@ public class MoveScrpit : MonoBehaviour
     {
         transform.position = transform.position +(Vector3.left * moveSpeed * Time.deltaTime);
 
-        if (transform.position.x < deadZone)
+        if (transform.position.x < -40)
         {
             Destroy(gameObject);
         }

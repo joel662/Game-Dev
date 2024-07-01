@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class BooScript : MonoBehaviour
 {
@@ -49,9 +50,9 @@ public class BooScript : MonoBehaviour
     private void killReset()
     {
         Destroy(gameObject);
-        
-        Debug.Log(sc.score);
+        SpawnScrpit.score = Mathf.Max(SpawnScrpit.score, 0);
+        Debug.Log(SpawnScrpit.score);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
+        SpawnScrpit.score = 0;
     }
 }

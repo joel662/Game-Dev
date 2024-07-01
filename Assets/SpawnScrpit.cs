@@ -7,7 +7,7 @@ public class SpawnScrpit : MonoBehaviour
     public GameObject pipe;
     public float spawnRate = 2f;
     private float timer = 0;
-    public int score = -3;
+    public static int score = -2;
     public float heightOffset = 10;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class SpawnScrpit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timer< spawnRate)
+        if(timer < spawnRate)
         {
             timer += Time.deltaTime;
         }
@@ -28,8 +28,6 @@ public class SpawnScrpit : MonoBehaviour
             timer = 0;
             score=score+1;
         }
-
-
         
     }
 
