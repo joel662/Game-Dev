@@ -158,7 +158,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.31344986, g: 0.23255958, b: 0.335849, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -183,7 +183,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 18
+  orthographic size: 22
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -326,7 +326,7 @@ Transform:
   m_GameObject: {fileID: 868515002}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09, y: -0.75, z: 0}
+  m_LocalPosition: {x: -4.15, y: -0.29, z: 0}
   m_LocalScale: {x: 0.49960193, y: 0.4353639, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -441,7 +441,7 @@ Transform:
   m_GameObject: {fileID: 1345353860}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.81, y: -0.19, z: 0.020879319}
+  m_LocalPosition: {x: 45, y: -0.19, z: 0.020879319}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -459,9 +459,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaf240f79518eeb4bbd2cd9e078ff3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipe: {fileID: 4543916363043120355, guid: 56ae678db1adb2d4ba9825a41244b2d7, type: 3}
-  spawnRate: 3
-  heightOffset: 10
+  handPrefabs:
+  - {fileID: 4035510678659093478, guid: 2644861093757cb4c938f81afad54000, type: 3}
+  - {fileID: 1834980711881558742, guid: e402ef919a2ef544db62ebaa56f40e80, type: 3}
+  - {fileID: 3538832069881080098, guid: 79917b9133d13a74ea4b7f8ed37ef4ff, type: 3}
+  - {fileID: 8079455756587440347, guid: 0bdd064dd7ecaa54ca2b034fb3f55536, type: 3}
+  spawnRate: 8
+  heightOffset: 9
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

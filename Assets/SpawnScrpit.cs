@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnScrpit : MonoBehaviour
 {
-    public GameObject pipe;
+    public GameObject[] handPrefabs;
     public float spawnRate = 2f;
     private float timer = 0;
     public static int score = -2;
@@ -12,7 +12,7 @@ public class SpawnScrpit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnPipe();
+        spawnHands();
     }
 
     // Update is called once per frame
@@ -24,18 +24,21 @@ public class SpawnScrpit : MonoBehaviour
         }
         else
         {
-            spawnPipe();
+            spawnHands();
             timer = 0;
             score=score+1;
         }
         
     }
 
-    void spawnPipe()
+    void spawnHands()
     {
+        int randomIndex = Random.Range(0, handPrefabs.Length);
+        GameObject selectedHand = handPrefabs[randomIndex];
+
         float lowestPoint = transform.position.y - heightOffset;
         float highestPoint = transform.position.y + heightOffset;
-        Instantiate(pipe, new Vector3(transform.position.x, Random.RandomRange(lowestPoint,highestPoint), 0), transform.rotation);
+        Instantiate(selectedHand, new Vector3(transform.position.x, Random.RandomRange(lowestPoint,highestPoint), 0), transform.rotation);
     
     }
 }
