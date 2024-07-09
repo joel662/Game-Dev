@@ -15,14 +15,17 @@ public class BooScript : MonoBehaviour
 
     [SerializeField] private Transform poleCheck;
     [SerializeField] private LayerMask poleLayer;
+    public LogicScrpit logic;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         killReset();
+        logic.setScoreToZero();
 
     }
     // Start is called before the first frame update
     void Start()
     {
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScrpit>();
         sc = spawner.GetComponent<SpawnScrpit>();
     }
 
@@ -40,6 +43,7 @@ public class BooScript : MonoBehaviour
         if (transform.position.y < -20 || transform.position.y > 19)
         {
             killReset() ;
+            logic.setScoreToZero();
         }
             
     }
