@@ -7,11 +7,12 @@ public class SpawnScrpit : MonoBehaviour
     public GameObject pipe;
     public float spawnRate = 2f;
     private float timer = 0;
-    public static int score = -2;
+    public static int score = -3;
     public float heightOffset = 10;
     // Start is called before the first frame update
     void Start()
     {
+        
         spawnPipe();
     }
 
