@@ -29,7 +29,7 @@ public class BooScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)){
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began){
 
             boo.velocity = Vector2.up * flightStrength;
         }
@@ -37,7 +37,7 @@ public class BooScript : MonoBehaviour
         {
             Debug.Log("YES");
         }
-        if (transform.position.y < -20)
+        if (transform.position.y < -20 || transform.position.y > 19)
         {
             killReset() ;
         }
